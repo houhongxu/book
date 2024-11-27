@@ -1,0 +1,19 @@
+{
+  "name": "vite",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "esm": "node ./1-node-module/esm-import-cjs.mjs",
+    "cjs": "node ./1-node-module/cjs-require-esm.cjs",
+    "serve": "node ./2-chrome-module/serve.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "express": "^4.21.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.1"
+  }
+}
