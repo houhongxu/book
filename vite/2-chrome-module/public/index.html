@@ -6,17 +6,20 @@
     <title>module</title>
   </head>
   <body>
-    <script type="module" src="./add-mjs.mjs"></script>
-    <script type="module" src="./esm-import-esm.mjs"></script>
+    <div id="root"></div>
 
     <script type="importmap">
       {
         "imports": {
-          "react": "https://cdn.skypack.dev/react"
+          "react": "https://esm.sh/react",
+          "react-dom": "https://esm.sh/react-dom"
         }
       }
     </script>
+    <script type="module" src="./react.mjs"></script>
 
+    <script type="module" src="./add-mjs.mjs"></script>
+    <script type="module" src="./esm-import-esm.mjs"></script>
     esm module
   </body>
 </html>
