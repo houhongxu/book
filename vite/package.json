@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "esm": "node ./1-node-module/esm-import-cjs.mjs",
-    "cjs": "node ./1-node-module/cjs-require-esm.cjs",
-    "serve": "node ./2-chrome-module/serve.mjs"
+    "esm-import-cjs": "node ./1-node-module/esm-import-cjs.mjs",
+    "cjs-require-esm": "node ./1-node-module/cjs-require-esm.cjs",
+    "serve": "node ./2-chrome-module/serve.mjs",
+    "vite": "tsx ./3-cjs-to-esm/vite.ts"
   },
   "author": "",
   "license": "ISC",

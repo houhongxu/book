@@ -11,4 +11,5 @@ esm.sh、skypack、jspm 是 基于 ESM 的 CDN 基础设施
 export * from "/stable/react@18.3.1/es2022/react.mjs";
 export { default } from "/stable/react@18.3.1/es2022/react.mjs";
 ```
-注意不要直接使用cdn url到项目
+
+注意不要直接使用 cdn url 到项目
