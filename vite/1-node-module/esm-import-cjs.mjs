@@ -1,7 +1,7 @@
 // esm import cjs是可行的，其中单独default导出最兼容，而具名导出只兼容一个属性，混合导出的esm语法无法兼容
 // 像 import React, {useState} from 'react' 是通过构建工具实现兼容的
 
-import defaultEsm, { addEsm } from "./utils/add-mjs.mjs";
+import defaultEsm, { addEsm } from "./utils/add-esm.mjs";
 
 // cjs named具名导出一个或者default导出
 // import { addCjs } from "./utils/named-add-cjs.cjs";
@@ -20,7 +20,7 @@ console.log("defaultEsm", defaultEsm);
 
 console.log("defaultCjs", defaultCjs);
 
-import * as allEsm from "./utils/add-mjs.mjs";
+import * as allEsm from "./utils/add-esm.mjs";
 import * as allCjs from "./utils/default-named-add-cjs.cjs";
 
 console.log("allEsm", allEsm);

@@ -1,5 +1,5 @@
 module.exports = {
-  addCjs(a:number, b:number) {
+  addCjs(a, b) {
     return a + b;
   },
 };
