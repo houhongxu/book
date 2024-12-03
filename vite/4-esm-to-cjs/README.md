@@ -1,8 +1,12 @@
 # README
 
-少见的需求，或许 webpack 处理代码转为 webpackRequire 属于这种
+少见的需求，哪怕 webpack 处理代码转为 webpackRequire 也不完全属于这种
 
-但是 webpackRequire 只是类似 cjs
+vite 可能不太考虑这种场景，所以只有 srr 打开时可以转化
+
+而这时又不是基于 esbuild 而是基于 rollup 转换
+
+通过 rollup-commonjs 插件兼容比较好
 
 ## esm > cjs
 

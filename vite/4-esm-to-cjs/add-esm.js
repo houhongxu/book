@@ -3,5 +3,5 @@ export function addEsm(a, b) {
 }
 
 export default {
-  text: "我是esm default",
+  text: "我esm有default",
 };

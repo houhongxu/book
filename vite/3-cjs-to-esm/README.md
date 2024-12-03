@@ -2,6 +2,14 @@
 
 esm2cjs 是 vite 里最常用的转换了
 
+理论上 vite 打包基于 rollup
+
+那么是不是和 rollup 的 esm2cjs 一样呢
+
+其实不是，transform 阶段 vite 是交给了 esbuild
+
+可以看产物，rollup 的格式和 vite 并不相同
+
 ## tsx
 
 tsx 是基于 esbuild 的 ts 文件执行器
