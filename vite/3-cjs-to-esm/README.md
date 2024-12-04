@@ -44,6 +44,7 @@ var require_add_cjs = __commonJS({
       addCjs(a, b) {
         return a + b;
       },
+      addDefault: { text: "我cjs没有default" },
     };
   },
 });
