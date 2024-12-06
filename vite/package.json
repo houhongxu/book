@@ -3,10 +3,9 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "1": "node ./1-node-module/esm-import-cjs.mjs && node ./1-node-module/cjs-require-esm.cjs && tsc -p ./1-node-module/tsconfig.json && node ./1-node-module/dist/esm-import-cjs.js && rm -r ./1-node-module/dist",
-    "2": "node ./2-chrome-module/serve.mjs",
-    "3": "tsx ./3-cjs-to-esm/build.ts",
-    "4": "tsx ./4-esm-to-cjs/build.ts"
+    "1": "tsx ./3-cjs-to-esm/build.ts",
+    "2": "tsx ./4-esm-to-cjs/build.ts",
+    "10": "tsx ./10-plugin/index.ts"
   },
   "author": "",
   "license": "ISC",

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "allowJs": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["./src/main.tsx"]
+}
