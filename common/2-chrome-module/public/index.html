@@ -8,16 +8,16 @@
   <body>
     <div id="root"></div>
 
+    <!-- react19删除了render api，所以使用18 -->
     <script type="importmap">
       {
         "imports": {
-          "react": "https://esm.sh/react",
-          "react-dom": "https://esm.sh/react-dom"
+          "react": "https://esm.sh/react@18.2.0",
+          "react-dom": "https://esm.sh/react-dom@18.2.0"
         }
       }
     </script>
     <script type="module" src="./react.mjs"></script>
-
     <script type="module" src="./add-mjs.mjs"></script>
     <script type="module" src="./esm-import-esm.mjs"></script>
     esm module
