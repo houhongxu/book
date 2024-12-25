@@ -5,6 +5,6 @@ const args = process.argv.slice(2);
 
 if (args.includes("--dev")) {
   viteDev();
-} else {
+} else if (args.includes("--build")) {
   viteBuild();
 }
