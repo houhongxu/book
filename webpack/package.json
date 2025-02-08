@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "1": "tsx ./1-tapable/index.ts"
+    "1": "tsx ./1-tapable/index.ts",
+    "2": "tsx ./2-demo/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,7 @@
     "tapable": "^2.2.1",
     "tsx": "^4.19.2",
     "webpack": "^5.97.1",
-    "webpack-cli": "^6.0.1"
+    "webpack-cli": "^6.0.1",
+    "@types/node": "^22.10.1"
   }
 }
