@@ -5,11 +5,20 @@ const jsCodeString = "const a = 1";
 
 const babelAst = parse(jsCodeString, { tokens: true });
 
-traverse(babelAst, {
-  enter(path) {
-    console.log("enter", path.node);
+traverse(
+  babelAst,
+  {
+    enter(path, state) {
+      console.log("enter", path.node.type, state);
+      state.count++;
+    },
+    exit(path, state) {
+      console.log("exit", path.node.type, state);
+    },
+    "Identifier|NumericLiteral"(path) {
+      console.log("Identifier|NumericLiteral", path.node.type);
+    },
   },
-  exit(path) {
-    console.log("exit", path.node);
-  },
-});
+  undefined,
+  { count: 1 }
+);
