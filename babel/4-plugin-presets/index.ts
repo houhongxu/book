@@ -1,11 +1,12 @@
-import { PluginObj, transform } from "@babel/core";
+import { PluginItem, transform } from "@babel/core";
+import { declare } from "@babel/helper-plugin-utils";
 
-// 参数就是@babel/core的导出
-function BabelPluginLog(babel: any): PluginObj {
-  console.log(Object.keys(babel));
+const BabelPluginLog = declare((api, options, dirname) => {
+  console.log(Object.keys(api), options, dirname);
 
   return {
     name: "remove-console",
+    pre(state) {},
     visitor: {
       CallExpression(path, state) {
         const callee = path.node.callee;
@@ -23,13 +24,25 @@ function BabelPluginLog(babel: any): PluginObj {
         }
       },
     },
+    post(state) {},
   };
-}
+});
+
+type Params = Parameters<ReturnType<typeof declare>>;
+
+const BabelPresetsLog: (...args: Params) => { plugins: PluginItem[] } = (
+  api,
+  options,
+  dirname
+) => ({
+  plugins: [[BabelPluginLog, options?.logOptions]],
+});
 
 const jsCodeString = "const a = 1;console.log(1)";
 
 const result = transform(jsCodeString, {
-  plugins: [[BabelPluginLog, { option1: true }]],
+  presets: [[BabelPresetsLog, { logOptions: { option1: true } }]],
+  // plugins: [[BabelPluginLog, { option1: true }]],
 });
 
 console.log(result?.code);
